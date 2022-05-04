@@ -1,0 +1,37 @@
+@import "variables";
+
+.section {
+  position: relative;
+  overflow: hidden;
+
+  .text {
+    position: relative;
+    transform: skewY(345deg) translateY(-200px);
+    -webkit-transform: skewY(345deg) translateY(-200px);
+    -moz-transform: skewY(345deg) translateY(-200px);
+    -ms-transform: skewY(345deg) translateY(-200px);
+    -o-transform: skewY(345deg) translateY(-200px);
+
+    .letterContainer {
+      position: relative;
+      width: 100%;
+      font-size: 8em;
+      margin: 0;
+      color: $negro2;
+      pointer-events: none;
+      line-height: 1em;
+      white-space: nowrap;
+      transform: translateX(calc(0% - var(--x) * 2));
+      -webkit-transform: translateX(calc(0% - var(--x) * 2));
+      -moz-transform: translateX(calc(0% - var(--x) * 2));
+      -ms-transform: translateX(calc(0% - var(--x) * 2));
+      -o-transform: translateX(calc(0% - var(--x) * 2));
+
+      .word {
+        margin-inline: 10px;
+        color: $negro3;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
