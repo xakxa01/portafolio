@@ -1,0 +1,25 @@
+@import "variables";
+
+.navbar__container {
+  z-index: 50;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background: $blanco;
+  padding: 5px;
+  width: max-content;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  margin-bottom: 10px;
+
+  .navbar__link {
+    margin-inline: 10px;
+  }
+}
