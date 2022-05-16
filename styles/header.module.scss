@@ -1,15 +1,10 @@
 @import "variables";
 
 .header {
-  // height: 100vh;
   width: 100%;
-  background: linear-gradient(
-    112.73deg,
-    #363c45 19.02%,
-    #222831 65.84%,
-    #222831 97.37%
-  );
+  background: linear-gradient(-140deg, #363c45 40%, #222831 60%);
   overflow: hidden;
+  height: 100vh;
 
   .centerContainer {
     position: absolute;
@@ -19,6 +14,42 @@
     bottom: 0;
     height: 100vh;
     width: 100%;
+
+    .textContainer {
+      @include interBold;
+      text-transform: uppercase;
+      color: $blanco;
+      font-size: 3em;
+      position: absolute;
+      bottom: 0;
+      top: -10vh;
+      right: 0;
+      left: 0;
+      margin: auto;
+      height: 70vh;
+      width: 90%;
+      z-index: 100;
+
+      .nameContainer {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        .blue {
+          color: $azul;
+        }
+      }
+
+      .title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40%;
+        text-align: right;
+      }
+    }
 
     .logo {
       display: flex;
