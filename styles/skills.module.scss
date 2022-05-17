@@ -2,4 +2,17 @@
 
 .skillsContainer {
   height: 100vh;
+  position: absolute;
+  width: 100%;
+  background: $negro3;
+
+  .background {
+    margin-top: 30vh;
+
+    .skills {
+      height: 60vh;
+      background: $azul;
+      margin-top: -5px;
+    }
+  }
 }
