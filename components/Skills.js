@@ -1,5 +1,6 @@
 import styles from "../styles/skills.module.scss"
-import Head from "next/head"
+import Slider from "react-slick";
+import Image from "next/image"
 
 export default function Skills() {
 	return (
@@ -30,6 +31,19 @@ export default function Skills() {
 						</path>
 					</svg>
 					<main className={styles.skills}>
+						<Slider>
+							<section className={styles.iconGridContainer}>
+								<Image src="https://img.icons8.com/ios-glyphs/150/F5F5F5/html-5.png" alt="html" width="150" height="150" />
+								<Image src="https://img.icons8.com/ios-glyphs/150/F5F5F5/css3.png" alt="html" width="150" height="150" />
+								<Image src="https://img.icons8.com/ios-glyphs/150/F5F5F5/javascript.png" alt="html" width="150" height="150" />
+								<Image src="https://img.icons8.com/ios-filled/150/F5F5F5/sass.png" alt="html" width="150" height="150" />
+								<Image src="https://img.icons8.com/ios-glyphs/150/F5F5F5/react.png" alt="html" width="150" height="150" />
+								<Image src="https://img.icons8.com/material-rounded/150/F5F5F5/redux.png" alt="html" width="150" height="150" />
+								<Image src="/assets/svg/tailwind_icon_131947.svg" alt="html" width="150" height="150" />
+								<Image src="/assets/svg/nextjs_icon_132160.svg" alt="html" width="150" height="150" />
+								<Image src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/150/F5F5F5/external-bootstrap-a-free-and-open-source-css-framework-logo-bold-tal-revivo.png" alt="html" width="150" height="150" />
+							</section>
+						</Slider>
 					</main>
 				</div>
 

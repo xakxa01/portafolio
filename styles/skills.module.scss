@@ -13,6 +13,12 @@
       height: 60vh;
       background: $azul;
       margin-top: -5px;
+
+      .iconGridContainer {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        @include solid;
+      }
     }
   }
 }
