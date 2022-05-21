@@ -9,7 +9,7 @@ export default function useScroll(number) {
 	 */
 	const changeColor = () => {
 		if (typeof window !== "undefined") {
-			if (window.scrollY >= number) {
+			if (window.scrollY > number) {
 				setColor(true)
 			} else {
 				setColor(false)

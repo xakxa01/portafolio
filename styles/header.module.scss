@@ -1,5 +1,15 @@
 @import "variables";
 
+@keyframes writer {
+  from {
+    width: 0ch;
+  }
+
+  to {
+    width: 15ch;
+  }
+}
+
 .header {
   width: 100%;
   background: linear-gradient(-140deg, #363c45 40%, #222831 60%);
@@ -41,12 +51,22 @@
         }
       }
 
-      .title {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 40%;
-        text-align: right;
+      .titleAnimacion {
+        height: 100%;
+        overflow: hidden;
+        width: 15ch;
+        position: relative;
+        animation: writer 3s;
+        -webkit-animation: writer 3s;
+
+        .title {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          text-align: right;
+          display: flex;
+          flex-direction: column;
+        }
       }
     }
 

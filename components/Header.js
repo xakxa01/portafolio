@@ -19,10 +19,12 @@ export default function Header() {
 									gómez <span className={styles.blue}>barriento</span>
 								</span>
 							</p>
-							<p className={styles.title}>
-								{`<DESARROLLADOR
-								WEB />`}
-							</p>
+							<div className={styles.titleAnimacion}>
+								<p className={styles.title}>
+									&#60;DESARROLLADOR
+									WEB &#47;&#62;
+								</p>
+							</div>
 						</div>
 						<div className={styles.logo}>
 							<svg

@@ -87,11 +87,11 @@ export default function Skills() {
 							</animate>
 						</path>
 					</svg>
-					<h1 className={styles.title}>habilidades</h1>
+					<h1 className={styles.title}>habilidade</h1>
 					<main className={styles.skills}>
 						<div className={styles.iconGridContainer}>
 							{iconArray.map((icon) => (
-								<span key={useId} className={styles.imgPrueba}>
+								<span key={useId} className={styles.imgPrueba} data-aos="fade-up">
 									<Image
 										src={icon.img}
 										alt={icon.name}

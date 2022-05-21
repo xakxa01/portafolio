@@ -12,13 +12,21 @@
 
     .title {
       color: $blanco;
-      font-size: 5rem;
+      font-size: 7rem;
       position: absolute;
       right: 5%;
-      top: 13%;
+      top: 10%;
       text-transform: uppercase;
       @include interBold;
       z-index: -1;
+
+      &::after {
+        content: "S";
+        color: $blanco;
+        padding: 5px;
+        animation: terminal 1s infinite;
+        -webkit-animation: terminal 1s infinite;
+      }
     }
 
     .wave {
@@ -41,5 +49,14 @@
         gap: 20px 5px;
       }
     }
+  }
+}
+
+@keyframes terminal {
+  from {
+    background: transparent;
+  }
+  to {
+    background: $amarillo;
   }
 }
