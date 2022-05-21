@@ -1,15 +1,72 @@
 import styles from "../styles/skills.module.scss"
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image"
+import { useId } from "react";
 
 export default function Skills() {
+	const iconArray = [
+		{
+			img: "https://img.icons8.com/ios-glyphs/150/F5F5F5/html-5.png",
+			name: "html"
+		},
+		{
+			img: "https://img.icons8.com/ios-glyphs/150/F5F5F5/css3.png",
+			name: "css"
+		},
+		{
+			img: "https://img.icons8.com/ios-glyphs/150/F5F5F5/javascript.png",
+			name: "javascript"
+		},
+		{
+			img: "https://img.icons8.com/ios-filled/150/F5F5F5/sass.png",
+			name: "sass"
+		},
+		{
+			img: "https://img.icons8.com/ios-glyphs/150/F5F5F5/react.png",
+			name: "react"
+		},
+		{
+			img: "https://img.icons8.com/material-rounded/150/F5F5F5/redux.png",
+			name: "redux"
+		},
+		{
+			img: "/assets/svg/tailwind_icon_131947.svg",
+			name: "tailwind"
+		},
+		{
+			img: "/assets/svg/nextjs_icon_132160.svg",
+			name: "nextjs"
+		},
+		{
+			img: "https://img.icons8.com/small/150/F5F5F5/nodejs.png",
+			name: "nodejs"
+		},
+		{
+			img: "https://img.icons8.com/external-tal-revivo-bold-tal-revivo/150/f5f5f5/external-mongodb-a-cross-platform-document-oriented-database-program-logo-bold-tal-revivo.png",
+			name: "mongodb"
+		},
+		{
+			img: "https://img.icons8.com/ios-filled/150/f5f5f5/git.png",
+			name: "git"
+		},
+		{
+			img: "https://img.icons8.com/ios-glyphs/150/f5f5f5/figma.png",
+			name: "figma"
+		},
+		{
+			img: "https://img.icons8.com/external-tal-revivo-bold-tal-revivo/150/f5f5f5/external-firebase-a-googles-mobile-platform-that-helps-you-quickly-develop-high-quality-apps-logo-bold-tal-revivo.png",
+			name: "firebase"
+		}
+	]
+
 	return (
 		<>
 			<section className={styles.skillsContainer}>
-
 				<div className={styles.background}>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-						<path fill="#0099FF" fillOpacity="1" d="M0,64L48,85.3C96,107,192,149,288,149.3C384,149,480,107,576,74.7C672,43,768,21,864,37.3C960,53,1056,107,1152,138.7C1248,171,1344,181,1392,186.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" >
+						<path className={styles.wave} fill="#0099FF" fillOpacity="1" d="M0,64L48,85.3C96,107,192,149,288,149.3C384,149,480,107,576,74.7C672,43,768,21,864,37.3C960,53,1056,107,1152,138.7C1248,171,1344,181,1392,186.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" >
 							<animate
 								attributeName="d"
 								dur="10000ms"
@@ -30,20 +87,20 @@ export default function Skills() {
 							</animate>
 						</path>
 					</svg>
+					<h1 className={styles.title}>habilidades</h1>
 					<main className={styles.skills}>
-						<Slider>
-							<section className={styles.iconGridContainer}>
-								<Image src="https://img.icons8.com/ios-glyphs/150/F5F5F5/html-5.png" alt="html" width="150" height="150" />
-								<Image src="https://img.icons8.com/ios-glyphs/150/F5F5F5/css3.png" alt="html" width="150" height="150" />
-								<Image src="https://img.icons8.com/ios-glyphs/150/F5F5F5/javascript.png" alt="html" width="150" height="150" />
-								<Image src="https://img.icons8.com/ios-filled/150/F5F5F5/sass.png" alt="html" width="150" height="150" />
-								<Image src="https://img.icons8.com/ios-glyphs/150/F5F5F5/react.png" alt="html" width="150" height="150" />
-								<Image src="https://img.icons8.com/material-rounded/150/F5F5F5/redux.png" alt="html" width="150" height="150" />
-								<Image src="/assets/svg/tailwind_icon_131947.svg" alt="html" width="150" height="150" />
-								<Image src="/assets/svg/nextjs_icon_132160.svg" alt="html" width="150" height="150" />
-								<Image src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/150/F5F5F5/external-bootstrap-a-free-and-open-source-css-framework-logo-bold-tal-revivo.png" alt="html" width="150" height="150" />
-							</section>
-						</Slider>
+						<div className={styles.iconGridContainer}>
+							{iconArray.map((icon) => (
+								<span key={useId} className={styles.imgPrueba}>
+									<Image
+										src={icon.img}
+										alt={icon.name}
+										width="150"
+										height="150"
+									/>
+								</span>
+							))}
+						</div>
 					</main>
 				</div>
 

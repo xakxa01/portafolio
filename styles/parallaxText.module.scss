@@ -36,6 +36,10 @@
         margin-inline: 10px;
         color: $negro3;
         text-transform: uppercase;
+
+        &::selection {
+          background: transparent;
+        }
       }
     }
   }

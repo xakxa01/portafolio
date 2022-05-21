@@ -1,23 +1,44 @@
 @import "variables";
 
 .skillsContainer {
-  height: 100vh;
+  // height: 100vh;
   position: absolute;
   width: 100%;
   background: $negro3;
+  z-index: 1;
 
   .background {
-    margin-top: 30vh;
+    margin-top: 20vh;
+
+    .title {
+      color: $blanco;
+      font-size: 5rem;
+      position: absolute;
+      right: 5%;
+      top: 13%;
+      text-transform: uppercase;
+      @include interBold;
+      z-index: -1;
+    }
+
+    .wave {
+      z-index: 20;
+    }
 
     .skills {
-      height: 60vh;
+      height: 100vh;
+      width: 100%;
       background: $azul;
-      margin-top: -5px;
+      margin-top: -80px;
+      display: flex;
+      justify-content: center;
+      align-items: start;
 
       .iconGridContainer {
+        width: 60%;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        @include solid;
+        gap: 20px 5px;
       }
     }
   }
