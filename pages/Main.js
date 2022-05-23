@@ -8,12 +8,15 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Portafolio from "../components/Portafolio";
+import Contacto from "../components/Contacto";
 
 export default function Main() {
 
 	useEffect(() => {
 		AOS.init()
 	}, []);
+
+	const scrollPosition = 600;
 
 	const typeTitles = [
 		{
@@ -24,17 +27,17 @@ export default function Main() {
 		{
 			name: 'habilidades',
 			icon: 'https://img.icons8.com/material-rounded/30/0099FF/fire-element.png',
-			scroll: useScroll(600)
+			scroll: useScroll(scrollPosition)
 		},
 		{
 			name: 'portafolio',
 			icon: 'https://img.icons8.com/material-rounded/30/0099FF/briefcase.png',
-			scroll: useScroll(1200)
+			scroll: useScroll(scrollPosition * 2)
 		},
 		{
 			name: 'contacto',
 			icon: 'https://img.icons8.com/material-rounded/30/0099FF/contact-card.png',
-			// scroll: useScroll(1200)
+			scroll: useScroll(scrollPosition * 3)
 		},
 	]
 
@@ -57,6 +60,7 @@ export default function Main() {
 			<Header />
 			<Skills />
 			<Portafolio />
+			<Contacto />
 		</>
 	)
 }

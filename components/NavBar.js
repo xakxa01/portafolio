@@ -1,11 +1,12 @@
 import Image from 'next/image'
-import { useEffect, useId, useState } from 'react'
+import { useId } from 'react'
 import useScroll from '../hook/useScroll'
 import styles from '../styles/Navbar.module.scss'
 
 export default function NavBar() {
 
-	const color = useScroll(100)
+	const scrollStart = useScroll(100)
+	const scrollEnd = useScroll(1800)
 
 	const arrayOptions = [
 		{
@@ -27,11 +28,15 @@ export default function NavBar() {
 	]
 
 	return (
-		<nav className={
-			color
-				? styles.scroll + ' ' + styles.navbar__container
-				: styles.navbar__container
-		} >
+		<nav className={styles.navbar__container} >
+			<div
+				className={styles.navbar__bar}
+				style={
+					scrollStart
+						? { width: '100%' }
+						: { width: '0%' }
+				}></div>
+
 			{arrayOptions.map(({ name, icon }) => (
 				<a href="" className={styles.navbar__link} key={useId}>
 					<Image src={icon} alt={name} width={30} height={30} />
