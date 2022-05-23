@@ -12,12 +12,12 @@ export default function Header() {
 					<div className={styles.centerContainer}>
 						<div className={styles.textContainer}>
 							<p className={styles.nameContainer}>
-								<span>
-									Carlos <span className={styles.blue}>xavier</span>
-								</span>
-								<span>
-									gómez <span className={styles.blue}>barriento</span>
-								</span>
+								<i>
+									Carlos <i className={styles.blue}>xavier</i>
+								</i>
+								<i>
+									gómez <i className={styles.blue}>barriento</i>
+								</i>
 							</p>
 							<div className={styles.titleAnimacion}>
 								<p className={styles.title}>

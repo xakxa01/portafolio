@@ -1,0 +1,117 @@
+@import "variables";
+
+.dot {
+  padding: 10px;
+  margin: 10px;
+  background: $negro3;
+  position: absolute;
+  right: -40vw;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+
+  &:hover {
+    background: $blanco;
+  }
+}
+
+.portafolioContainer {
+  height: 100vh;
+  background: linear-gradient(132.26deg, #0099ff 65.48%, #08d9d6 99.53%);
+  @include borderTransparent;
+  margin-top: -1px;
+  overflow: hidden;
+
+  .portafolioTitle {
+    color: $blanco;
+    @include interBold;
+    font-size: 3.5rem;
+    z-index: 1;
+    margin-left: 3vw;
+    margin-top: 5vh;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  .slider {
+    .portafolioItem {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 90px;
+      height: 50vh;
+
+      .portafolioItemImage {
+        position: absolute;
+        top: 5vh;
+        left: 5vw;
+      }
+
+      .portafolioItemInfo {
+        color: $blanco;
+        position: absolute;
+        right: 0;
+
+        .portafolioItemTitle {
+          @include nunitoBlack;
+          font-size: 5.7rem;
+          margin-bottom: 0.5vh;
+        }
+
+        .portfolioItemDescription {
+          @include breeSerif;
+          padding-block: 20px;
+          width: 70%;
+          font-size: 1.3rem;
+        }
+
+        .portafolioItemLinks {
+          width: 50%;
+          display: flex;
+          align-items: center;
+
+          .watchCodeLink,
+          .hostingLink {
+            @include nunitoBlack;
+            font-size: 1.9rem;
+            color: $blanco;
+            text-decoration: none;
+            margin: 10px;
+            outline: none;
+          }
+
+          .watchCodeLink {
+            background: $negro2;
+            padding: 0.5vh 2vw;
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+
+            &:hover {
+              background: $negro3;
+            }
+
+            .watchCodeText {
+              margin-left: 0.5vw;
+            }
+          }
+
+          .hostingLink {
+            @include nunitoSemiBold;
+          }
+        }
+      }
+    }
+  }
+}

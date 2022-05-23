@@ -1,5 +1,4 @@
 import styles from "../styles/skills.module.scss"
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image"
@@ -62,16 +61,15 @@ export default function Skills() {
 	]
 
 	return (
-		<>
-			<section className={styles.skillsContainer}>
-				<div className={styles.background}>
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-						<path className={styles.wave} fill="#0099FF" fillOpacity="1" d="M0,64L48,85.3C96,107,192,149,288,149.3C384,149,480,107,576,74.7C672,43,768,21,864,37.3C960,53,1056,107,1152,138.7C1248,171,1344,181,1392,186.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" >
-							<animate
-								attributeName="d"
-								dur="10000ms"
-								repeatCount="indefinite"
-								values="
+		<section className={styles.skillsContainer}>
+			<div className={styles.background}>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+					<path className={styles.wave} fill="#0099FF" fillOpacity="1" d="M0,64L48,85.3C96,107,192,149,288,149.3C384,149,480,107,576,74.7C672,43,768,21,864,37.3C960,53,1056,107,1152,138.7C1248,171,1344,181,1392,186.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" >
+						<animate
+							attributeName="d"
+							dur="10000ms"
+							repeatCount="indefinite"
+							values="
 								M0,64L48,85.3C96,107,192,149,288,149.3C384,149,480,107,576,74.7C672,43,768,21,864,37.3C960,53,1056,107,1152,138.7C1248,171,1344,181,1392,186.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
 
 								M0,192L48,170.7C96,149,192,107,288,112C384,117,480,171,576,181.3C672,192,768,160,864,149.3C960,139,1056,149,1152,138.7C1248,128,1344,96,1392,80L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
@@ -84,27 +82,25 @@ export default function Skills() {
 								M0,64L48,85.3C96,107,192,149,288,149.3C384,149,480,107,576,74.7C672,43,768,21,864,37.3C960,53,1056,107,1152,138.7C1248,171,1344,181,1392,186.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
 								">
 
-							</animate>
-						</path>
-					</svg>
-					<h1 className={styles.title}>habilidade</h1>
-					<main className={styles.skills}>
-						<div className={styles.iconGridContainer}>
-							{iconArray.map((icon) => (
-								<span key={useId} className={styles.imgPrueba} data-aos="fade-up">
-									<Image
-										src={icon.img}
-										alt={icon.name}
-										width="150"
-										height="150"
-									/>
-								</span>
-							))}
-						</div>
-					</main>
-				</div>
-
-			</section>
-		</>
+						</animate>
+					</path>
+				</svg>
+				<h1 className={styles.title}>habilidade</h1>
+				<main className={styles.skills}>
+					<div className={styles.iconGridContainer}>
+						{iconArray.map((icon) => (
+							<span key={useId} className={styles.imgPrueba} data-aos="fade-up">
+								<Image
+									src={icon.img}
+									alt={icon.name}
+									width="150"
+									height="150"
+								/>
+							</span>
+						))}
+					</div>
+				</main>
+			</div>
+		</section>
 	)
 }
