@@ -25,7 +25,6 @@
 .portafolioContainer {
   height: 100vh;
   background: linear-gradient(132.26deg, #0099ff 65.48%, #08d9d6 99.53%);
-  @include borderTransparent;
   margin-top: -1px;
   overflow: hidden;
 
@@ -74,7 +73,7 @@
         }
 
         .portafolioItemLinks {
-          width: 50%;
+          // width: 50%;
           display: flex;
           align-items: center;
 

@@ -1,10 +1,8 @@
 @import "variables";
 
 .skillsContainer {
-  width: 100%;
   background: $negro3;
   z-index: 1;
-  border: solid transparent 0.1px;
 
   .background {
     margin-top: 10vh;
@@ -39,10 +37,10 @@
       height: 80vh;
       width: 100%;
       background: $azul;
-      margin-top: -80px;
       display: flex;
       justify-content: center;
       align-items: start;
+      margin-top: -4px;
 
       .iconGridContainer {
         width: 60%;
