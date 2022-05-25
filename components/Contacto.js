@@ -7,20 +7,31 @@ export default function Contacto() {
 		<section className={styles.contactoContainer}>
 			<div className={styles.backgrounds}>
 				<div className={styles.blob}>
-					<Image src="/assets/images/blob.svg" alt="blob" width={487} height={384} />
+					<Image src="/assets/images/blob.svg" alt="blob" width={348} height={274} />
 				</div>
 				<div className={styles.logo}>
-					<Image src="/assets/images/gigant logo.svg" alt="logo" width={665} height={585} />
+					<Image src="/assets/images/gigant logo.svg" alt="logo" width={578} height={508.79} />
 				</div>
 			</div>
-			<h1>
-				<i>conta</i><i>ctame</i>
-			</h1>
-			<form>
-				<input type="text" />
-				<textarea cols="30" rows="10"></textarea>
-				<button type="submit">Enviar</button>
-			</form>
+			<main className={styles.formContainer}>
+				<h1 clsName={styles.formTitulo}>
+					<i className={styles.letter1}>conta</i><i className={styles.letter2}>ctame</i>
+				</h1>
+				<form className={styles.form}>
+					<input
+						type="text"
+						className={styles.emailInput}
+						placeholder="tu email"
+					/>
+					<textarea
+						cols="30"
+						rows="5"
+						className={styles.messageInput}
+						placeholder="tu mensaje"
+					></textarea>
+					<button type="submit" className={styles.btnSubmit}>Enviar</button>
+				</form>
+			</main>
 		</section>
 	)
 }
