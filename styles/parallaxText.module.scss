@@ -44,3 +44,36 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  @keyframes letter {
+    0% {
+      transform: translateX(-400%);
+      -webkit-transform: translateX(-400%);
+      -moz-transform: translateX(-400%);
+      -ms-transform: translateX(-400%);
+      -o-transform: translateX(-400%);
+    }
+    100% {
+      transform: translateX(0%);
+      -webkit-transform: translateX(0%);
+      -moz-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+      -o-transform: translateX(0%);
+    }
+  }
+
+  .section {
+    .text {
+      .letterContainer {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        animation: 10s ease-in-out infinite alternate letter;
+        -webkit-animation: 10s ease-in-out infinite alternate letter;
+      }
+    }
+  }
+}

@@ -98,3 +98,22 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .contactoContainer {
+    .backgrounds {
+      .blob {
+        // @include solid;
+      }
+
+      .logo {
+        position: absolute;
+        width: 70%;
+        right: -17%;
+      }
+    }
+
+    .formContainer {
+    }
+  }
+}

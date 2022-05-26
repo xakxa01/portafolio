@@ -22,3 +22,9 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .redes__container {
+    display: none;
+  }
+}

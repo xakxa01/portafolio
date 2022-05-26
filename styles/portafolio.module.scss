@@ -74,7 +74,6 @@
         }
 
         .portafolioItemLinks {
-          // width: 50%;
           display: flex;
           align-items: center;
 
@@ -111,6 +110,27 @@
           .hostingLink {
             @include nunitoSemiBold;
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .portafolioContainer {
+    .portafolioTitle {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    .slider {
+      .portafolioItem {
+        padding: 50px;
+        height: 40vh;
+
+        .portafolioItemImage {
+          top: 5vh;
+          left: 5vw;
         }
       }
     }

@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import useScroll from '../hook/useScroll';
 import styles from "../styles/redes.module.scss"
-import Tippy from '@tippyjs/react'
-import 'tippy.js/dist/tippy.css';
 
 export default function Redes() {
 
@@ -45,10 +43,10 @@ export default function Redes() {
 			{redesArray.map(redes => (
 				<>
 					<a
+						className={styles.redes__link}
 						href={redes.link}
 						target="_blank"
 						rel="noreferrer"
-						className={styles.redes__link}
 					>
 						<Image
 							src={redes.icon}
@@ -56,7 +54,6 @@ export default function Redes() {
 							width={24}
 							height={24}
 						/>
-
 					</a>
 				</>
 			))}

@@ -60,3 +60,24 @@
     background: $amarillo;
   }
 }
+
+@media (max-width: 768px) {
+  .skillsContainer {
+    .background {
+      padding-top: 6vh;
+
+      .title {
+        font-size: 3rem;
+      }
+
+      .skills {
+        height: 100%;
+
+        .iconGridContainer {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px 10px;
+        }
+      }
+    }
+  }
+}

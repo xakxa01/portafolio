@@ -74,3 +74,22 @@
     -o-transform: rotate(0deg) scale(1);
   }
 }
+
+@media (max-width: 768px) {
+  .header {
+    background: linear-gradient(180deg, $negro3 40%, $negro 60%);
+
+    .centerContainer {
+      .logoContainer {
+        .logoImg {
+          padding: 10%;
+          width: 70%;
+        }
+      }
+
+      .textContainer {
+        font-size: 1.7em;
+      }
+    }
+  }
+}
