@@ -50,7 +50,7 @@ export default function Portafolio() {
 	]
 
 	return (
-		<section className={styles.portafolioContainer}>
+		<section className={styles.portafolioContainer} id="portafolio">
 
 			<h1 className={styles.portafolioTitle} data-aos="fade-right">&#60;portafolio &#47;&#62;</h1>
 

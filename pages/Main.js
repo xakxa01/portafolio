@@ -4,16 +4,20 @@ import NavBar from "../components/NavBar";
 import Redes from "../components/Redes";
 import Skills from "../components/Skills";
 import useScroll from "../hook/useScroll";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Portafolio from "../components/Portafolio";
 import Contacto from "../components/Contacto";
+import Loading from "./Loading";
 
 export default function Main() {
 
+	const [loading, setLoading] = useState(false)
+
 	useEffect(() => {
 		AOS.init()
+		setLoading(true)
 	}, []);
 
 	const scrollPosition = 600;
@@ -43,24 +47,29 @@ export default function Main() {
 
 	return (
 		<>
-			<Head>
-				{typeTitles.map(({ name, icon, scroll }) => (
-					scroll
-					&& (
-						<>
-							{scroll && <link rel="shortcut icon" href={icon} />}
-							<title>{name}</title>
-						</>
-					)
-				))}
-			</Head>
+			{
+				loading
+					? <>
+						<Head>
+							{typeTitles.map(({ name, icon, scroll }) => (
+								scroll
+								&& (
+									<>
+										{scroll && <link rel="shortcut icon" href={icon} />}
+										<title>{name}</title>
+									</>
+								)
+							))}
+						</Head>
 
-			<Redes />
-			<NavBar />
-			<Header />
-			<Skills />
-			<Portafolio />
-			<Contacto />
+						<Redes />
+						<NavBar />
+						<Header />
+						<Skills />
+						<Portafolio />
+						<Contacto /> </>
+					: <Loading loading={loading} />
+			}
 		</>
 	)
 }

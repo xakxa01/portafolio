@@ -4,13 +4,25 @@ import Image from 'next/image'
 
 export default function Contacto() {
 	return (
-		<section className={styles.contactoContainer}>
+		<section className={styles.contactoContainer} id="contacto">
 			<div className={styles.backgrounds}>
 				<div className={styles.blob}>
-					<Image src="/assets/images/blob.svg" alt="blob" width={348} height={274} />
+					<Image
+						src="/assets/images/blob.svg"
+						alt="blob"
+						width={348}
+						height={274}
+						draggable={false}
+					/>
 				</div>
 				<div className={styles.logo}>
-					<Image src="/assets/images/gigant logo.svg" alt="logo" width={578} height={508.79} />
+					<Image
+						src="/assets/images/gigant logo.svg"
+						alt="logo"
+						width={578}
+						height={508.79}
+						draggable={false}
+					/>
 				</div>
 			</div>
 			<main className={styles.formContainer}>
@@ -29,7 +41,12 @@ export default function Contacto() {
 						className={styles.messageInput}
 						placeholder="tu mensaje"
 					></textarea>
-					<button type="submit" className={styles.btnSubmit}>Enviar</button>
+					<button
+						type="submit"
+						className={styles.btnSubmit}
+					>
+						Enviar
+					</button>
 				</form>
 			</main>
 		</section>

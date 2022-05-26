@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { useId } from 'react'
 import useScroll from '../hook/useScroll'
 import styles from '../styles/Navbar.module.scss'
+import Link from "next/link"
 
 export default function NavBar() {
 
@@ -10,7 +11,7 @@ export default function NavBar() {
 
 	const arrayOptions = [
 		{
-			name: 'home',
+			name: 'header',
 			icon: 'https://img.icons8.com/material-rounded/30/0099FF/home.png',
 		},
 		{
@@ -18,13 +19,13 @@ export default function NavBar() {
 			icon: 'https://img.icons8.com/material-rounded/30/0099FF/fire-element.png',
 		},
 		{
+			name: 'portafolio',
+			icon: 'https://img.icons8.com/material-rounded/30/0099FF/briefcase.png'
+		},
+		{
 			name: 'contacto',
 			icon: 'https://img.icons8.com/material-rounded/30/0099FF/contact-card.png',
 		},
-		{
-			name: 'portafolio',
-			icon: 'https://img.icons8.com/material-rounded/30/0099FF/briefcase.png'
-		}
 	]
 
 	return (
@@ -38,9 +39,11 @@ export default function NavBar() {
 				}></div>
 
 			{arrayOptions.map(({ name, icon }) => (
-				<a href="" className={styles.navbar__link} key={useId}>
-					<Image src={icon} alt={name} width={30} height={30} />
-				</a>
+				<div className={styles.navbar__link} key={useId}>
+					<Link href={`#${name}`}  >
+						<Image src={icon} alt={name} width={30} height={30} />
+					</Link>
+				</div>
 			))}
 		</nav>
 	)

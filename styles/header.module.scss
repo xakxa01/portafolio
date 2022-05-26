@@ -1,98 +1,76 @@
 @import "variables";
 
-@keyframes writer {
-  from {
-    width: 0ch;
-  }
-
-  to {
-    width: 15ch;
-  }
-}
-
 .header {
   width: 100%;
-  background: linear-gradient(-140deg, #363c45 40%, #222831 60%);
+  background: linear-gradient(-140deg, $negro3 40%, $negro 60%);
   height: 100vh;
   overflow: hidden;
 
   .centerContainer {
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     .textContainer {
       @include interBold;
       text-transform: uppercase;
       color: $blanco;
-      font-size: 3em;
-      position: absolute;
-      bottom: 0;
-      top: -10vh;
-      right: 0;
-      left: 0;
-      margin: auto;
-      height: 70vh;
-      width: 90%;
-      z-index: 100;
+      font-size: 2em;
+      width: 20ch;
+      position: relative;
+      text-align: center;
 
-      .nameContainer {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        right: 0;
-        top: 0;
+      .title {
+        &::selection {
+          background: transparent;
+        }
 
-        .blue {
+        &::after {
+          content: "LADOR WEB />";
           color: $azul;
         }
       }
-
-      .titleAnimacion {
-        height: 100%;
-        overflow: hidden;
-        width: 15ch;
-        position: relative;
-        animation: writer 3s;
-        -webkit-animation: writer 3s;
-
-        .title {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          text-align: right;
-          display: flex;
-          flex-direction: column;
-        }
-      }
     }
 
-    .logo {
+    .logoContainer {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
       width: 100%;
-
-      .blob {
-        transform: scale(0.8);
-        -webkit-transform: scale(0.8);
-        -moz-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-        -o-transform: scale(0.8);
-        position: absolute;
-        top: -15vh;
-      }
+      background: url("../public/assets/svg/Vector3.svg") no-repeat;
+      background-size: contain;
+      background-position: center center;
 
       .logoImg {
-        margin-top: -18.598vh;
-        width: 24.8902vw;
-        height: 42.9185vh;
+        padding: 4%;
+        display: flex;
+        justify-content: center;
+        animation: rotateAndScale 1s ease-in-out;
+        -webkit-animation: rotateAndScale 1s ease-in-out;
       }
     }
+  }
+}
+
+@keyframes rotateAndScale {
+  from {
+    transform: rotate(1080deg) scale(0);
+    -webkit-transform: rotate(1080deg) scale(0);
+    -moz-transform: rotate(1080deg) scale(0);
+    -ms-transform: rotate(1080deg) scale(0);
+    -o-transform: rotate(1080deg) scale(0);
+  }
+
+  to {
+    transform: rotate(0deg) scale(1);
+    -webkit-transform: rotate(0deg) scale(1);
+    -moz-transform: rotate(0deg) scale(1);
+    -ms-transform: rotate(0deg) scale(1);
+    -o-transform: rotate(0deg) scale(1);
   }
 }

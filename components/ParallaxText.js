@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import { useId } from 'react';
 import styles from "../styles/parallaxText.module.scss"
 
-
-
 export default function ParallaxText() {
+
+	const id = useId();
 
 	if (typeof window === 'object') {
 		let position = document.documentElement;
@@ -18,18 +18,15 @@ export default function ParallaxText() {
 	return (
 		<section className={styles.section} >
 			<div className={styles.text}>
-				{numberLines.map(line => {
-					return <h2 key={line} className={styles.letterContainer} >
-
-						{numberWords.map(word => {
-							return (
-								<span key={word} className={styles.word}>
-									xakxa
-								</span>
-							)
-						})}
+				{numberLines.map(() => (
+					<h2 key={id} className={styles.letterContainer} >
+						{numberWords.map(() => (
+							<span key={id} className={styles.word}>
+								xakxa
+							</span>
+						))}
 					</h2>
-				})}
+				))}
 			</div>
 		</section>
 	)
