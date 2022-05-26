@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import useScroll from '../hook/useScroll';
 import styles from "../styles/redes.module.scss"
+import Tippy from '@tippyjs/react'
+import 'tippy.js/dist/tippy.css';
 
 export default function Redes() {
 
@@ -10,64 +12,54 @@ export default function Redes() {
 	/* It's a ternary operator. It's a conditional operator that assigns a value to a variable based on a condition. */
 	const condition = scroll ? "363c45" : "F5F5F5";
 
-	/* It's a class that returns a function that returns a JSX element */
-	class redesTemplate {
-		constructor(link, icon, title, name) {
-			return (
+	/* It's creating an array with the objects created with the class redesTemplate. */
+	const redesArray = [
+		{
+			socialMedia: "instagram",
+			link: "https://www.instagram.com/xakxa01",
+			icon: `https://img.icons8.com/material-rounded/24/${condition}/instagram-new.png`,
+			name: "xakxa01"
+		},
+		{
+			socialMedia: "github",
+			link: "https://www.github.com/xakxa01",
+			icon: `https://img.icons8.com/material-rounded/24/${condition}/github.png`,
+			name: "xakxa01"
+		},
+		{
+			socialMedia: "linkedin",
+			link: "https://www.linkedin.com/in/carlos-xavier-g%C3%B3mez-barriento-931aa6223/",
+			icon: `https://img.icons8.com/material-rounded/24/${condition}/linkedin--v1.png`,
+			name: "carlos xavier gomez barriento"
+		},
+		{
+			socialMedia: "twitter",
+			link: "https://www.twitter.com/xakxa01",
+			icon: `https://img.icons8.com/material-rounded/24/${condition}/twitter.png`,
+			name: "Xakxa01"
+		},
+	];
+
+	return (
+		<aside className={styles.redes__container} data-aos="fade-right">
+			{redesArray.map(redes => (
 				<>
 					<a
-						href={link}
+						href={redes.link}
 						target="_blank"
 						rel="noreferrer"
 						className={styles.redes__link}
 					>
 						<Image
-							src={icon}
-							alt={title}
+							src={redes.icon}
+							alt={redes.title}
 							width={24}
 							height={24}
 						/>
 
 					</a>
-
 				</>
-			)
-		}
-	}
-
-	/* It's creating a new object with the class redesTemplate. */
-	const instagram = new redesTemplate(
-		"https://www.instagram.com/xakxa01/",
-		`https://img.icons8.com/material-rounded/24/${condition}/instagram-new.png`,
-		"Instagram",
-		"xakxa01"
-	),
-		github = new redesTemplate(
-			"https://github.com/xakxa01",
-			`https://img.icons8.com/material-rounded/24/${condition}/github.png`,
-			"github",
-			"xakxa01"
-		),
-		twitter = new redesTemplate(
-			"https://twitter.com/xakxa01",
-			`https://img.icons8.com/material-rounded/24/${condition}/twitter.png`,
-			"twitter",
-			"Xakxa01"
-		),
-		linkedin = new redesTemplate(
-			"https://www.linkedin.com/in/carlos-xavier-g%C3%B3mez-barriento-931aa6223/",
-			`https://img.icons8.com/material-rounded/24/${condition}/linkedin--v1.png`,
-			"linkedin",
-			"carlos xavier gomez barriento"
-		);
-
-
-	/* It's creating an array with the objects created with the class redesTemplate. */
-	const redesArray = [instagram, github, twitter, linkedin];
-
-	return (
-		<aside className={styles.redes__container} data-aos="fade-right">
-			{redesArray.map(redes => redes)}
+			))}
 		</aside>
 	)
 }

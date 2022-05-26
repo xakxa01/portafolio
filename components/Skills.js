@@ -8,55 +8,68 @@ export default function Skills() {
 	const iconArray = [
 		{
 			img: "https://img.icons8.com/ios-glyphs/150/F5F5F5/html-5.png",
-			name: "html"
+			name: "html",
+			link: "https://developer.mozilla.org/es/docs/Web/HTML"
 		},
 		{
 			img: "https://img.icons8.com/ios-glyphs/150/F5F5F5/css3.png",
-			name: "css"
+			name: "css",
+			link: "https://developer.mozilla.org/es/docs/Web/CSS"
 		},
 		{
 			img: "https://img.icons8.com/ios-glyphs/150/F5F5F5/javascript.png",
-			name: "javascript"
+			name: "javascript",
+			link: "https://developer.mozilla.org/es/docs/Web/JavaScript"
 		},
 		{
 			img: "https://img.icons8.com/ios-filled/150/F5F5F5/sass.png",
-			name: "sass"
+			name: "sass",
+			link: "https://sass-lang.com/"
 		},
 		{
 			img: "https://img.icons8.com/ios-glyphs/150/F5F5F5/react.png",
-			name: "react"
+			name: "react",
+			link: "https://es.reactjs.org/"
 		},
 		{
 			img: "https://img.icons8.com/material-rounded/150/F5F5F5/redux.png",
-			name: "redux"
+			name: "redux",
+			link: "https://es.redux.js.org/"
 		},
 		{
 			img: "/assets/svg/tailwind_icon_131947.svg",
-			name: "tailwind"
+			name: "tailwind",
+			link: "https://tailwindcss.com/"
 		},
 		{
 			img: "/assets/svg/nextjs_icon_132160.svg",
-			name: "nextjs"
+			name: "nextjs",
+			link: "https://nextjs.org/"
 		},
 		{
 			img: "https://img.icons8.com/small/150/F5F5F5/nodejs.png",
-			name: "nodejs"
+			name: "nodejs",
+			link: "https://nodejs.org/es/"
 		},
 		{
 			img: "https://img.icons8.com/external-tal-revivo-bold-tal-revivo/150/f5f5f5/external-mongodb-a-cross-platform-document-oriented-database-program-logo-bold-tal-revivo.png",
-			name: "mongodb"
+			name: "mongodb",
+			link: "https://www.mongodb.com/es"
 		},
 		{
 			img: "https://img.icons8.com/ios-filled/150/f5f5f5/git.png",
-			name: "git"
+			name: "git",
+			link: "https://git-scm.com/"
 		},
 		{
 			img: "https://img.icons8.com/ios-glyphs/150/f5f5f5/figma.png",
-			name: "figma"
+			name: "figma",
+			link: "https://www.figma.com/"
 		},
 		{
 			img: "https://img.icons8.com/external-tal-revivo-bold-tal-revivo/150/f5f5f5/external-firebase-a-googles-mobile-platform-that-helps-you-quickly-develop-high-quality-apps-logo-bold-tal-revivo.png",
-			name: "firebase"
+			name: "firebase",
+			link: "https://firebase.com/"
 		}
 	]
 
@@ -90,7 +103,14 @@ export default function Skills() {
 				<main className={styles.skills}>
 					<div className={styles.iconGridContainer}>
 						{iconArray.map((icon) => (
-							<span key={useId} className={styles.imgPrueba} data-aos="fade-up">
+							<a
+								href={icon.link}
+								key={useId}
+								className={styles.imgPrueba}
+								data-aos="fade-up"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<Image
 									src={icon.img}
 									alt={icon.name}
@@ -98,7 +118,7 @@ export default function Skills() {
 									height="150"
 									draggable={false}
 								/>
-							</span>
+							</a>
 						))}
 					</div>
 				</main>

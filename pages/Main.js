@@ -53,12 +53,10 @@ export default function Main() {
 						<Head>
 							{typeTitles.map(({ name, icon, scroll }) => (
 								scroll
-								&& (
-									<>
-										{scroll && <link rel="shortcut icon" href={icon} />}
-										<title>{name}</title>
-									</>
-								)
+								&& <>
+									{scroll && <link rel="shortcut icon" href={icon} />}
+									<title>{name}</title>
+								</>
 							))}
 						</Head>
 
@@ -67,7 +65,8 @@ export default function Main() {
 						<Header />
 						<Skills />
 						<Portafolio />
-						<Contacto /> </>
+						<Contacto />
+					</>
 					: <Loading loading={loading} />
 			}
 		</>
