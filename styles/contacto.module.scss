@@ -59,11 +59,11 @@
 
     .emailInput,
     .messageInput {
-      border-radius: 20px;
-      -webkit-border-radius: 20px;
-      -moz-border-radius: 20px;
-      -ms-border-radius: 20px;
-      -o-border-radius: 20px;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
       border: transparent;
       padding: 10px;
       padding-left: 10px;
@@ -85,11 +85,11 @@
       border: none;
       color: $blanco;
       padding: 7px;
-      border-radius: 20px;
-      -webkit-border-radius: 20px;
-      -moz-border-radius: 20px;
-      -ms-border-radius: 20px;
-      -o-border-radius: 20px;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
       @include nunitoBlack;
       width: 100%;
       cursor: pointer;
@@ -103,17 +103,22 @@
   .contactoContainer {
     .backgrounds {
       .blob {
-        // @include solid;
+        width: 65%;
       }
 
       .logo {
         position: absolute;
         width: 70%;
         right: -17%;
+        bottom: 0;
+        top: 60%;
       }
     }
 
     .formContainer {
+      .form {
+        width: 55%;
+      }
     }
   }
 }
