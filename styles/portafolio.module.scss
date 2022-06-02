@@ -28,6 +28,10 @@
   background: linear-gradient(132.26deg, #0099ff 65.48%, #08d9d6 99.53%);
   margin-top: -1px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
   .portafolioTitle {
     color: $blanco;
@@ -41,12 +45,19 @@
   }
 
   .slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
+
     .portafolioItem {
       display: flex;
       align-items: center;
+      justify-content: center;
       position: relative;
       padding: 90px;
       height: 50vh;
+      width: 90vw;
 
       .portafolioItemImage {
         position: absolute;
@@ -126,11 +137,39 @@
     .slider {
       .portafolioItem {
         padding: 50px;
-        height: 40vh;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
 
         .portafolioItemImage {
-          top: 5vh;
-          left: 5vw;
+          width: 80%;
+          position: static;
+        }
+
+        .portafolioItemInfo {
+          position: static;
+          margin-top: -80px;
+          width: 80%;
+          text-align: center;
+
+          .portfolioItemDescription {
+            width: 100%;
+          }
+
+          .portafolioItemLinks {
+            .hostingLink {
+              font-size: 1.5rem;
+              width: 40%;
+            }
+
+            .watchCodeLink {
+              font-size: 1.5rem;
+              width: 60%;
+              justify-content: center;
+              align-items: center;
+            }
+          }
         }
       }
     }
